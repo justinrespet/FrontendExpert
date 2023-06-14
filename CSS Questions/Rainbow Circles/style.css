@@ -1,0 +1,32 @@
+
+#outer {
+    height: 250px;
+    width: 250px;
+    border: 25px solid #ff0000;
+    border-radius: 50%;
+    background-color: #ffa500;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#middle {
+    height: 150px;
+    width: 150px;
+    border: 25px solid #ffff00;
+    border-radius: 50%;
+    background-color: #008000;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#inner {
+    height: 50px;
+    width: 50px;
+    border: 25px solid #0000ff;
+    border-radius: 50%;
+    background-color: #800080;
+}
