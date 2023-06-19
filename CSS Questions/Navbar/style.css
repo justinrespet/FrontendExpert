@@ -4,15 +4,16 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #6e072d;
     color: #FFFFFF;
+    font-size: 18px;
 }
 
 ul {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    padding: 0;
+    margin: 0;
 }
 
 li {
@@ -20,7 +21,15 @@ li {
     list-style-type: none; 
     /* Sets padding to 1 and 1.5 times root font size */
     padding: 1em 1.5em;
-    font-size: 18px;
     /* Changes mouse cursor to pointer finger on hover */
     cursor: pointer;
+}
+
+li:hover {
+    background-color: #b90e4d;
+}
+
+/* Will select all list items that are not last of their type */
+li:not(:last-of-type) {
+    border-right: 2px solid white;
 }
