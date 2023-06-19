@@ -1,0 +1,26 @@
+body {
+    background-color: lightgray;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #6e072d;
+    color: #FFFFFF;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+li {
+    /* Removes bullets from list items */
+    list-style-type: none; 
+    /* Sets padding to 1 and 1.5 times root font size */
+    padding: 1em 1.5em;
+    font-size: 18px;
+    /* Changes mouse cursor to pointer finger on hover */
+    cursor: pointer;
+}
