@@ -1,0 +1,104 @@
+/* 
+Pig Emoji
+
+You're given an HTML file with the markup for a pig emoji.
+
+Using only CSS, style the HTML to have the appearance of a pig emoji with the 
+following characteristics:
+*/
+
+body {
+    background-color: darkgrey;
+}
+
+/* -The head should be a perfect circle with a width and height of 200px,
+a top margin of 20px, and a background color of #ffc0cb. */
+.head {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    background-color: #ffc0cb;
+    border: 0px solid black;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* -The ears should be perfect circles, each with a width and a height of 50px.
+They should be positioned behind the head and 10px inwards from the left and right
+edges of the head, respectively. They should also protrude above the head by 10px,
+and they should have the same background color as the head. */
+.ear {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
+    background-color: white;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    /* Z-index didn't work until position was absolute */
+    z-index: -1; 
+}
+
+.ear:first-child {
+    background-color: blue;
+    margin-left: 10px;
+}
+
+.ear:last-child {
+    background-color: red;
+    margin-left: 140px;
+}
+
+/* -The eyes should be perfect circles, each with a width and height of 50px.
+They should be positioned 40px from the top of the head, and 30px from the left and 
+right edges of the head, respectively. They should have a background color of white. */
+.eye {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 40px;
+    border: 0px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.eye:first-child {
+    margin-left: 30px;
+}
+
+.eye:last-child {
+    margin-left: 120px;
+}
+
+/* -Each eye contains a pupil, which should be half the size of the eye with a 
+border-radius of 50%. The pupils should be centered in their respective eye, and
+they should have a background color of black. */
+.pupil {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 25% auto;
+    background-color: black;
+}
+
+/* -The nose should have a width of 100px and a height of 60px. It should be
+horizontally centered and positioned 30px from the bottom of the head. Additionally, 
+it should have a border radius of 35% and a background color of #f57187. */
+.nose {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    margin-left: 50px;
+    margin-top: 110px;
+    border-radius: 35%;
+    background-color: #f57187;
+}
+
+/* -The nose contains two nostrils, each with a height that's 50% of the height of 
+the nose and a width that's 25% of the width of the nose. The nostrils should be 
+vertically centered with a horizonal space around them (twice as much space between
+them as from the edge of the nose). Additionally, they should have a border radius
+of 50% and a background color of black. */
+
+
+
