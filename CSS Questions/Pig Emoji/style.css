@@ -18,7 +18,7 @@ a top margin of 20px, and a background color of #ffc0cb. */
     height: 200px;
     margin-top: 20px;
     background-color: #ffc0cb;
-    border: 0px solid black;
+    border: 5px solid black;
     border-radius: 50%;
     z-index: 1;
 }
@@ -32,20 +32,18 @@ and they should have the same background color as the head. */
     width: 50px;
     height: 50px;
     margin-top: -10px;
-    background-color: white;
-    /* border: 2px solid black; */
+    background-color: #ffc0cb;
+    border: 5px solid black;
     border-radius: 50%;
     /* Z-index didn't work until position was absolute */
     z-index: -1; 
 }
 
 .ear:first-child {
-    background-color: blue;
     margin-left: 10px;
 }
 
 .ear:last-child {
-    background-color: red;
     margin-left: 140px;
 }
 
@@ -57,7 +55,7 @@ right edges of the head, respectively. They should have a background color of wh
     width: 50px;
     height: 50px;
     margin-top: 40px;
-    border: 0px solid black;
+    border: 2px solid black;
     border-radius: 50%;
     background-color: white;
 }
@@ -86,10 +84,13 @@ horizontally centered and positioned 30px from the bottom of the head. Additiona
 it should have a border radius of 35% and a background color of #f57187. */
 .nose {
     position: absolute;
+    display: flex;
+    justify-content: space-around;
     width: 100px;
     height: 60px;
     margin-left: 50px;
     margin-top: 110px;
+    border: 2px solid black;
     border-radius: 35%;
     background-color: #f57187;
 }
@@ -99,6 +100,16 @@ the nose and a width that's 25% of the width of the nose. The nostrils should be
 vertically centered with a horizonal space around them (twice as much space between
 them as from the edge of the nose). Additionally, they should have a border radius
 of 50% and a background color of black. */
+.nostril {
+    align-self: center;
+    height: 30px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+/* -The head and both ears should each have a solid, black, 5px border, while the 
+nose and both eyes should each have a solid black, 2px border. */
 
 
 
