@@ -14,13 +14,13 @@ body {
 /* -The head should be a perfect circle with a width and height of 200px,
 a top margin of 20px, and a background color of #ffc0cb. */
 .head {
+    position: relative;
     width: 200px;
     height: 200px;
     margin-top: 20px;
     background-color: #ffc0cb;
     border: 5px solid black;
     border-radius: 50%;
-    z-index: 1;
 }
 
 /* -The ears should be perfect circles, each with a width and a height of 50px.
@@ -31,7 +31,7 @@ and they should have the same background color as the head. */
     position: absolute;
     width: 50px;
     height: 50px;
-    margin-top: -10px;
+    top: -10px;
     background-color: #ffc0cb;
     border: 5px solid black;
     border-radius: 50%;
@@ -40,11 +40,11 @@ and they should have the same background color as the head. */
 }
 
 .ear:first-child {
-    margin-left: 10px;
+    left: 10px;
 }
 
 .ear:last-child {
-    margin-left: 140px;
+    right: 10px;
 }
 
 /* -The eyes should be perfect circles, each with a width and height of 50px.
@@ -52,30 +52,35 @@ They should be positioned 40px from the top of the head, and 30px from the left 
 right edges of the head, respectively. They should have a background color of white. */
 .eye {
     position: absolute;
+
+    /* Flex container aligning and centering pupils */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 50px;
     height: 50px;
-    margin-top: 40px;
+    top: 40px;
     border: 2px solid black;
     border-radius: 50%;
     background-color: white;
 }
 
 .eye:first-child {
-    margin-left: 30px;
+    left: 30px;
 }
 
 .eye:last-child {
-    margin-left: 120px;
+    right: 30px;
 }
 
 /* -Each eye contains a pupil, which should be half the size of the eye with a 
 border-radius of 50%. The pupils should be centered in their respective eye, and
 they should have a background color of black. */
 .pupil {
-    width: 25px;
+    width: 25px; 
     height: 25px;
     border-radius: 50%;
-    margin: 25% auto;
     background-color: black;
 }
 
@@ -88,8 +93,15 @@ it should have a border radius of 35% and a background color of #f57187. */
     justify-content: space-around;
     width: 100px;
     height: 60px;
-    margin-left: 50px;
-    margin-top: 110px;
+
+    /* right: 0; One method to center an absolute element
+    left: 0;
+    margin: auto; */
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: 30px;
     border: 2px solid black;
     border-radius: 35%;
     background-color: #f57187;
