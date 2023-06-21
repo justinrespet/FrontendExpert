@@ -46,9 +46,9 @@ Using only CSS, style the purchase form to have the following characteristics: *
 and a background color of #e0e0e0. */
 
 #wrapper {
-    padding: 12px;
-    border-radius: 12px;
-    background-color: #e0e0e0;
+    padding: var(--wrapper-padding);
+    border-radius: var(--wrapper-border-radius);
+    background-color: var(--wrapper-background-color);
 }
 
 /* -The ordered list should be styled as a stepper component:
@@ -56,9 +56,18 @@ and a background color of #e0e0e0. */
         maintain its default vertical margin */
 
 ol {
-    list-style-type: none; 
     display: flex;
-    justify-content: space-around;
+    padding: 0;
+    /* justify-content: space-around; */
+}
+
+li {
+    list-style-type: none;
+}
+
+ol li {
+    flex-basis: 100%;
+    text-align: center;
 }
 
 /*      --Each list item in the stepper should have its corresponding item number above
@@ -67,9 +76,20 @@ ol {
         and a solid, black, 4px border. The number inside of the circle should be
         horizontally and vertically centered, and the circle should be horizontally
         centered above the text content.*/
-ol > li::before {
-    content: "";
-} 
+ol li::before {
+    content: "1";
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    width: var(--circle-width);
+    height: var(--circle-width);
+    border-radius: 50%;
+    border: 4px solid black;
+    background-color: #FFFFFF;
+    margin: 0 auto var(--circle-bottom-margin) auto;
+    font-size: var(--circle-font-size);
+}
 
 /*      --The number-circle for the list item with the selected class should have
         white text and a background color of #279600. */
