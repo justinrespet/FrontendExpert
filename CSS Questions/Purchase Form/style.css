@@ -58,7 +58,7 @@ and a background color of #e0e0e0. */
 ol {
     display: flex;
     padding: 0;
-    /* justify-content: space-around; */
+    counter-reset: list-items;
 }
 
 li {
@@ -77,9 +77,9 @@ ol li {
         horizontally and vertically centered, and the circle should be horizontally
         centered above the text content.*/
 ol li::before {
-    content: "1";
+    counter-increment: list-items;
+    content: counter(list-items);
     display: flex;
-    flex-basis: 100%;
     justify-content: center;
     align-items: center;
     width: var(--circle-width);
@@ -93,6 +93,10 @@ ol li::before {
 
 /*      --The number-circle for the list item with the selected class should have
         white text and a background color of #279600. */
+.selected::before {
+    color: white;
+    background-color: green;
+}
 
 /*      --Between each pair of adjacent number-circles should be a 4px-tall black 
         horizontal line. These divider lines should be vertically centered with
