@@ -66,6 +66,7 @@ li {
 }
 
 ol li {
+    position: relative;
     flex-basis: 100%;
     text-align: center;
 }
@@ -95,33 +96,101 @@ ol li::before {
         white text and a background color of #279600. */
 .selected::before {
     color: white;
-    background-color: green;
+    background-color: var(--selected-background-color);
 }
 
 /*      --Between each pair of adjacent number-circles should be a 4px-tall black 
         horizontal line. These divider lines should be vertically centered with
         respect to the number-circles, and they should sit exactly between the circles,
         just touching their edges. */
+ol li:not(:first-of-type)::after {
+    content: "";
+    display: block;
+    width: calc(100% - var(--circle-width));
+    height: var(--divider-line-height);
+    background-color: black;
+    position: absolute;
+    left: calc(-50% + var(--circle-radius)) ;
+    top: calc(var(--circle-radius) 
+    + var(--circle-border-width) 
+    - var(--divider-line-height) / 2);
+}
 
 /*  -The unordered list should be styled as follows:
         --The unordered list should maintain its default margin, but it should have
         no padding. */
+ul {
+    padding: 0;
+}
 
 /*      --Each list item in the unordered list represents a single product offering
         and should have 12px of padding, 12px of vertical margin, a height of 40px, 
         a border-radius of 8px, bold font, and a white background color. */
+ul li {
+    display: flex;
+    align-items: center;
+    height: var(--product-offering-height);
+    padding: var(--product-offering-padding);
+    border-radius: var(--product-offering-border-radius);
+    margin: var(--product-offering-vertical-margin) 0;
+    background-color: white;
+    font-weight: bold;
+}
 
-/*      --The labels should have 4px of left margin a a text color based on the
+/*      --The labels should have 4px of left margin and a text color based on the
         list-item class, following this mapping:
             .blue-product: #626ee3 
             .red-product: #890023
             .orange-product: #f37f1b
             .green-product: 11967e */
+label {
+    margin-left: var(--label-left-margin);
+}
+
+.blue-product label {
+    color: var(--blue-product-color);
+}
+
+.red-product label {
+    color: var(--red-product-color);
+}
+
+.orange-product label {
+    color: var(--orange-product-color);
+}
+
+.green-product label {
+    color: var(--green-product-color)
+}
 
 /*      --Each product-offering list item should also have a solid, 5px left border
         of the same colour as its text. */
+.blue-product {
+    border-left: var(--product-offering-left-border-size) solid var(--blue-product-color);
+}
+
+.red-product {
+    border-left: var(--product-offering-left-border-size) solid var(--red-product-color);
+}
+
+.orange-product {
+    border-left: var(--product-offering-left-border-size) solid var(--orange-product-color);
+}
+
+.green-product {
+    border-left: var(--product-offering-left-border-size) solid var(--green-product-color);
+}
 
 /*  -The "Continue" button should be aligned to the right side of the #wrapper,
      with 12px of padding, a font-size of 16px, a border radius of 8px, a background
      color of #02203c and a white text color. */
+button {
+    display: block;
+    margin-left: auto;
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-background-color);
+    color: white;
+}
 
