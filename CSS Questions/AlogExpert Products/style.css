@@ -1,68 +1,96 @@
 /* You're given an HTML file containing divs representing AlgoExpert's products. Using
 only CSS, align the products in the three rows following these specifications: */
 
+
+/* -The three rows have 24px of vertical spacing between them. */
+/* -All other styles are either browser-default styles or styles from the starting code. */
+
+body {
+    background-color: darkgray;
+}
+
+/*  Write your code here. */
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;;
+}
+
 /* -The first row contains SystemsExpert and MLExpert, in that order. */
 /*      --SystemsExpert has a width of 50% of the width of the container, MLExpert has
         a width of 30% the width of the container, and all of the remaining horizontal 
         space is between them. */
 /*      --MLExpert has a height of 75px, and SystemsExpert is vertically centered in
         the row. */
+
+#systems-expert {
+    background-color: #890023;
+    order: 1;
+    width: 50%;
+    margin-right: 20%;
+    align-self: center;
+}
+    
+    #ml-expert {
+    background-color: #f37f1b;
+    order: 2;
+    width: 30%;
+    height: 75px;
+}
+
 /* -The second row contains just AlgoExpert, which has a width of 75% of the width of
     the container and is horizontally centered. */
+
+#algo-expert {
+    background-color: #626ee3;
+    order: 3;
+    width: 75%;
+    margin: auto;
+}
+
 /* -The third row contains FrontendExpert and ProgrammingExpert, in that order. */
 /*      --FrontendExpert has a width of 40% of the width of the container, and 
         ProgrammingExpert takes up any remaining horizontal space, leaving 10px
         between the two products. */
 /*      --Programming Expert has a height of 75px, and FrontendExpert hugs the 
         bottom of the row. */
-/* -The three rows have 24px of vertical spacing between them. */
-/* -All other styles are either browser-default styles or styles from the starting code. */
 
-/*  Write your code here. */
-
-#algo-expert {
-    /*  Write your code here. */
-    background-color: #626ee3;
-  }
-  
-  #systems-expert {
-    /*  Write your code here. */
-    background-color: #890023;
-  }
-  
-  #ml-expert {
-    /*  Write your code here. */
-    background-color: #f37f1b;
-  }
-  
-  #frontend-expert {
-    /*  Write your code here. */
+#frontend-expert {
     background-color: #11967e;
-  }
-  
-  #programming-expert {
-    /*  Write your code here. */
+    order: 4;
+    width: 40%;
+    margin-right: 10px;
+    align-self: flex-end;
+}
+
+#programming-expert {
     background-color: #f21b3f;
-  }
-  
-  .product {
+    order: 5;
+    margin: auto;
+    width: calc(60% - 10px);
+    height: 75px;
+}
+
+.product {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
     color: white;
     font-weight: bold;
-  }
+}
 
-  /* Hint 1: The problem can be solved with either flexbox or grid. That said, flexbox
-  is likely easier, because the elements are not lined up in evenly sized columns. */
-  /* Hint 2: The order property can be added to any flex item to change its order
-  relative to other flex items. All items default to an order value of 0, and ties are
-  resolved based on the order in the DOM. */
-  /* Hint 3: The flex-wrap property can be set to wrap on a flex container to allow
-  items to go to new lines when they run out of space. */
-  /* Hint 4: The align-self property can be addded to any flex item to change its 
-  alignment on the cross-axis and override the align-items property of the flex container */
-  /* Hint 5: The flex-grow property can be added to any flex item to allow it to fill up any
-  remaining space along the main-axis. If multiple elements have a positive flex-grow value,
-  they will take up the extra space proportionally to their grow values. */
+/* Hint 1: The problem can be solved with either flexbox or grid. That said, flexbox
+is likely easier, because the elements are not lined up in evenly sized columns. */
+/* Hint 2: The order property can be added to any flex item to change its order
+relative to other flex items. All items default to an order value of 0, and ties are
+resolved based on the order in the DOM. */
+/* Hint 3: The flex-wrap property can be set to wrap on a flex container to allow
+items to go to new lines when they run out of space. */
+/* Hint 4: The align-self property can be addded to any flex item to change its 
+alignment on the cross-axis and override the align-items property of the flex container */
+/* Hint 5: The flex-grow property can be added to any flex item to allow it to fill up any
+remaining space along the main-axis. If multiple elements have a positive flex-grow value,
+they will take up the extra space proportionally to their grow values. */
+
