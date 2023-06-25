@@ -113,14 +113,41 @@ the head. Each eye should have a background color of white, and a solid #00b3ff,
 width and height of 30px. The triangle should be pointed up (i.e. the 30px edge should
 be parallel to the bottom of the head). The nose should be horizontally and vertically
 centered in the head. */
+.nose {
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #c90a0a;
+    top: 60px;
+    left: 60px;
+}
+
 /* The mouth should have a width of 100px, a height of 25px, and a background color of
 #dedede, and a solid, black, 1px, border with a 20px border-radius. The mouth should be
 25px from the bottom of the head (30px from the bottom of the head's border), and it 
 should be horizontally centered. */
+.mouth {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    height: 25px;
+    background-color: #dedede;
+    border: 1px solid black;
+    border-radius: 20px;
+    bottom: 25px;
+    left: 24px;
+}
+
 /* The mouth contains 4 teeth, each of which has a width of 5px and a background color
 of black. These teeth should take up the entire height of the mouth without overflowing
 out of the mouth. There should be even horizontal spacing between each tooth, with half
 as much space before the first tooth and after the last tooth. */
+.tooth {
+    width: 5px;
+    height: 100%;
+    background-color: black;
+}
 
 /* Hint 1: A triangle can be created purely by using borders when a block element has
 no width or height */
