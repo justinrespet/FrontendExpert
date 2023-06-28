@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Notifications Menu</title>
 </head>
 <body>
+    <div id="wrapper">
+        <h1>Notifications</h1>
+
+        <div id="notifications">
+            <div class="notification">
+                <img src="./images/clement.png" alt="Clement Mihailescu" />
+                <p><span class="time">15 minutes ago</span> commented on your recent post.</p>
+            </div>
+
+            <div class="notification">
+                <img src="./images/conner.png" alt="Conner Ardman" />
+                <p><span class="user">Conner Ardman</span> shared a new photo.</p>
+                <span class="time">3 hours ago</span>
+            </div>
+
+            <div class="notification">
+                <img src="./images/antoine.png" alt="Antoine Pourchet" />
+                <p>
+                    Congratulate <span class="user">Antoine Pourchet</span>
+                    for starting a new position as CTO at AlgoExpert.
+                </p>
+                <span class="time">5 years ago</span>
+            </div>
+        </div>
+
+        <button>View More</button>
+    </div>
     
 </body>
 </html>
