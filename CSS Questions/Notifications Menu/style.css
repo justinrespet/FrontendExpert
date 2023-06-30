@@ -1,6 +1,6 @@
 
 body {
-    background-color: black;
+    background-color: darkgray;
 }
 
 /* You're given an HTML file containing the markup for a notications menu. Using only
@@ -29,17 +29,66 @@ h1 {
 horizontally centered, with 10px of spacing between the notification and the edge of 
 the wrapper. Each notification has 10px of padding on all sides, a border-radius of 10px
 and a background color of white. */
+#notifications {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.notification {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
 /* Each notification has an image, which is 100px by 100px and a perfect circle. These 
 images also have a solid, black, 1px border. */
+.notification img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
 /* The notification paragraph is on the right of the image, with 10px of spacing between
 them. All other default margin from the paragraphs should be removed. Any text within the
 .user span is bold. */
+.notification p {
+    margin: 0 0 0 110px;
+}
+
+.user {
+    font-weight: bold;
+}
+
 /* The span with the time class is at the bottom right of the notification. This text has
 a normal font-weight, a font-size of 12px, and it is italicized. */
+.time {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    font-size: 12px;
+    font-style: italic;
+}
+
 /* The "View More" button is 10px below the bottom notification. This button has the same
 width as the notifications, and it is horizontally centered. This button has a font-size
 of 16px, a border-radius of 10px, 10px of padding on all sides, a background color of
 #02203c and a text color of white. */
+button {
+    display: block;
+    margin-top: 10px;
+    margin: auto;
+    width: 260px;
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 10px;
+    background-color: #02203c;
+    color: white;
+}
 
 /* Hint 1: This problem can be solved in a variety of ways, but using CSS Grid will
 likely be the simplest given the multi-column and multi-row layout. */
