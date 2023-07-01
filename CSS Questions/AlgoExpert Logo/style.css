@@ -17,12 +17,15 @@ CSS, replicate the expected output following these specifications: */
         of 10px and a solid, white, 5px border. The left edge of the inner circle is
         50px from the left edge of the #wrapper */
 #logo {
+    display: flex;
     width: 10px;
     height: 10px;
     border: 5px solid white;
     border-radius: 50%;
     margin-left: 50px;
     align-self: center;
+    align-items: center;
+    justify-content: center;
 }
 
 /*      --The first ring has a width of 100px, a height of 30px, and a border-radius of
@@ -36,8 +39,8 @@ CSS, replicate the expected output following these specifications: */
     border: 5px solid white;
     border-radius: 50%;
     transform: rotate(-45deg);
-    left: 5px;
-    top: 40px;
+    /* left: 5px;
+    top: 40px; */
 }
 
 /*      --The second ring is the same as the first ring, but it is rotated in the opposite
@@ -51,8 +54,8 @@ CSS, replicate the expected output following these specifications: */
     border: 5px solid white;
     border-radius: 50%;
     transform: rotate(45deg);
-    left: 5px;
-    top: 40px;
+    /* left: 5px;
+    top: 40px; */
 }
 
 /*  -To the right of the logo is the AlgoExpert text. This text is white, with a font-size
